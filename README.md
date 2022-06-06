@@ -13,12 +13,13 @@ For this project, I will play the role data engineer and be creating a Postgres 
 ```
 (Details about Fact/Dimension tables were obtained from Udacity class instructions)
 
-### Fact Table
+Fact Table
 
 1) songplays - records in log data associated with song plays i.e. records with page NextSong
 songplay_id, start_time, user_id, level, song_id, artist_id, session_id, location, user_agent
 
-## Dimension Tables
+Dimension Tables
+
 2) users - users in the app
 	* user_id, first_name, last_name, gender, level
 3) songs - songs in music database
