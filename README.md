@@ -8,7 +8,7 @@ A startup called Sparkify in analyzing their data (songs and user activity store
 The dataset for the project as mentioned above is stored in JSON files. There information is stored in 2 files, song and log files. Song file will contain information about the song and the log file will contain the information about the user access log information.
 For this project, I will play the role data engineer and be creating a Postgres DB with tables to facilitate the song play data analysis. Here are the specific goals of the project: 
 * Create a database schema and ETL pipeline for the analysis 
-   * Please refer to the following link,://github.com/kenhanscombe/project-postgres/blob/master/README.md, for a ER diagram 
+   * Please refer to the following link,http://github.com/kenhanscombe/project-postgres/blob/master/README.md, for a ER diagram 
 * Define FACT and DIMENSION tables for a STAR schema for the analysis 
 * Test the DB and ETL 
 * Compare my results with the expected results.
