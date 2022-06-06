@@ -22,5 +22,14 @@ For this project, I will play the role data engineer and be creating a Postgres 
 *  Test the changes 
 *  Carry out the analysis to compare the results
 
+## Sample code results
+
+Here is a sample code that extracts data from songplays table, only for the rows for that 
+the song_id and artist_id are not NULL
+
+```
+%sql SELECT * FROM songplays where song_id is not null and artist_id is not null;
+```
+
 ## Acknowledgements:
 * Udacity 
