@@ -29,7 +29,7 @@ def process_log_file(cur, filepath):
     t = pd.to_datetime(df['ts'], unit='ms')
     
     # insert time data records
-    time_data =   [df.ts.values, t.dt.hour.values, t.dt.day.values, 
+    time_data =   [t, t.dt.hour.values, t.dt.day.values, 
                    t.dt.weekofyear.values, t.dt.month.values, 
                    t.dt.year.values, t.dt.weekday.values]
     column_labels =  ('start_time', 'hour', 'day', 'week', 'month', 'year', 'dayofweek')
