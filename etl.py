@@ -29,11 +29,12 @@ def process_log_file(cur, filepath):
     t = pd.to_datetime(df['ts'], unit='ms')
     
     # insert time data records
-    time_data =   [t, t.dt.hour.values, t.dt.day.values, 
-                   t.dt.weekofyear.values, t.dt.month.values, 
-                   t.dt.year.values, t.dt.weekday.values]
-    column_labels =  ('start_time', 'hour', 'day', 'week', 'month', 'year', 'dayofweek')
-    time_df = pd.DataFrame(dict(zip(column_labels, time_data)))
+    time_data =   pd.concat([t, t.dt.hour, t.dt.day,
+                   t.dt.weekofyear, t.dt.month,
+                   t.dt.year, t.dt.weekday], axis=1)
+    column_labels =  ['start_time', 'hour', 'day', 'week', 'month', 'year', 'dayofweek']
+    time_data.columns = column_labels
+    time_df = time_data
 
     for i, row in time_df.iterrows():
         cur.execute(time_table_insert, list(row))
